@@ -1,0 +1,280 @@
+body {
+  
+  background: #fff;
+  margin: 0;
+  font: 15px 'Amiri', Arial, Helvetica, sans-serif;
+  color: #999999;
+  line-height: 1.6666667;
+  min-width: 320px;
+}
+
+/* ============================= header ====================== */
+#top {
+  background-image: url(./bg1.jpg);
+  height: 150px;
+  position: relative;
+  background-attachment: fixed;
+}
+
+
+
+header {
+  float: left;
+  position: relative;
+}
+
+
+#main {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+#content {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  background: #fff;
+}
+.navigation {
+  position: relative;
+  display: inline-block;
+}
+
+.navigation>li {
+  float: left;
+  position: relative;
+  display: block;
+  margin-left: 45px;
+}
+
+.navigation>li>a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 16px;
+  color: #04cfc5;
+  padding: 10px 0px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navigation>li>a:hover {
+  color: #d4af00;
+  text-decoration: underline;
+}
+
+.btn-default {
+  font-family: 'Montserrat';
+  display: inline-block;
+  color: #000;
+  border: none;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  position: relative;
+  border: 3px solid #000;
+  letter-spacing: 1px;
+  margin: 0 5px;
+}
+
+.btn-default:hover {
+  color: #fff;
+  background: #2bb;
+  border: 3px solid #2bb;
+}
+
+hr {
+  height: 7px;
+  background-color: #d4af00;
+  margin-top: 20px;
+  border: none;
+}
+
+
+.mx--15 {
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-50 {
+  margin-top: 80px;
+}
+
+.c-25 {
+  width: 25%;
+  float: left;
+}
+
+.c-80 {
+  width: 66%;
+  float: left;
+}
+
+.pull-right{
+  float: right;
+}
+
+.title {
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  padding-top: 25px;
+  padding-bottom: 45px;
+}
+
+.unstyled {
+  list-style: none;
+}
+
+.social {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.social li {
+  display: inline-block;
+  margin: 1px;
+  width: 35px;
+  height: 35px;
+}
+
+.w-75 {
+  display: grid;
+  width: 80%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.copyright {
+  position: relative;
+  background: #004157;
+  border-top: 1px solid #4b4b4b;
+  padding: 20px 0;
+  font-size: 10px;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  color: #aaaaaa;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+
+
+.breadcrumbs {
+  background: #004157;
+  padding: 8px 0;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.breadcrumbs1 {
+  padding: 0;
+  margin-top: 0px;
+  line-height: 20px;
+  color: #d4af00;
+  font-size: 11px;
+  background: none;
+}
+
+.breadcrumbs1 a {
+  color: #999999;
+  text-decoration: none;
+}
+
+.breadcrumbs1 a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.breadcrumbs1 span {
+  display: inline-block;
+  margin: 0 5px;
+  color: #615e5e;
+}
+
+.details {
+  margin-bottom: 40px;
+  border: 1px solid #dedede;
+  border-radius: 4px
+}
+
+
+.center {
+  text-align: center;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  top: 25px;
+  background: none;
+  border: none;
+  position: relative;
+  min-height: 0;
+  float: right;
+  text-align: center;
+}
+
+ 
+ul.profile-detail {
+  padding: 0 40px;
+}
+
+ul.profile-detail>li {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 14px;
+  color: #2f2f2f;
+  padding: 15px 0 20px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+ul.profile-detail>li:nth-last-of-type(1) {
+  border-bottom: none;
+}
+
+ul.profile-detail>li>span {
+  color: #a4a4a4;
+  width: 50%;
+}
+
+.social-detail {
+  margin-left: 40px;
+}
+
+footer {
+  position: relative;
+  background: #000;
+  padding: 60px 0 30px;
+  color: #999999;
+}
+
+footer a {
+  color: #999999;
+}

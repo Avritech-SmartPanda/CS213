@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daphne Avril's Assignments</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js"></script>
+
+</head>
+
+<body onload="getJsonText()">
+  <div id="top"></div>
+
+
+  <header class="breadcrumbs">
+    <a href="../index.html">Home</a>
+    <h2>Week 10 Assignment</h2>
+  </header>
+  <hr>
+  <div class="form">
+        <div class="select">
+     <p><label>Select a country</label></p> 
+      <select id="country" onChange="changeCountry(this)">
+        <option value="0">Select a country</option>
+        <option value="USA">USA</option>
+        <option value="Canada">Canada</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Russia">Russia</option>
+      </select>
+    </div>
+
+    <pre id="country_content" class="pl-20"></pre>
+
+    <label class="select">File name</label>
+    <p><input type="text" id="file" value="json.txt"></p>
+    <input type="submit" value="Submit" onclick="getJsonText()">
+
+  </div>
+  <div id="json_content" class="pl-20"></div>
+  <footer class="copyright">
+    <small>© Copyright 2021. All Rights Reserved.</small>
+  </footer>
+</body>
+
+</html>

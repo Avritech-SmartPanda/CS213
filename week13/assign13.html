@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daphne Avril's Assignments</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js"></script>
+</head>
+
+<body>
+
+
+
+  <div id="top"></div>
+  <header class="breadcrumbs">
+    <a href="../index.html">Home</a>
+  </header>
+
+
+  <div class="calcForm" id="calculator">
+    <h2 style="text-align: center;">Register Piano Students</h2>
+
+    <form method="post" id="form" action="assign13.php" onsubmit="verify()">
+
+      <div class="row">
+        <div class="col-6">         
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name" required />
+            <span id="nameError"></span>
+        </div>
+
+
+        <div class="col-6">
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name" required />
+            <span id="surnameError"></span>
+        </div>
+      </div>
+      <div>
+        <label>Student ID</label>
+        <input type="text" name="studentID" oninput="numCheck(this)" required>
+        <span id="numError"></span>
+      </div>
+      <div id="duetInfo" >
+
+        <fieldset>
+          <legend  id="duetTitle">Duet Person</legend>
+          <div class="row">
+            <div class="col-6">            
+                <label for="first_name2">First Name</label>
+                <input type="text" id="first_name2" name="first_name2" required />
+                <span id="nameError"></span>             
+            </div>
+  
+  
+            <div class="col-6">
+                <label for="last_name2">Last Name</label>
+                <input type="text" id="last_name2" name="last_name2" required />
+                <span id="surnameError"></span>
+            </div>
+          </div>
+          <div>
+            <label>Student ID</label>
+            <input type="text" name="studentID2" oninput="numCheck2(this)" required>
+            <span id="numError2"></span>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-12">
+        <fieldset>
+          <legend>Performance Type</legend>
+          <div> <label><input type="radio" name="performance" value="Solo" oninput="showDuet(this)">Solo</label></div>
+          <div> <label><input type="radio" name="performance" value="Duet" oninput="showDuet(this)">Duet</label></div>
+          <div> <label><input type="radio" name="performance" value="Concerto" oninput="showDuet(this)">Concerto</label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="col-12">
+        <fieldset>
+          <legend>Skill Level</legend>
+          <div> <label><input type="radio" name="level" value="Beginner">Beginner</label></div>
+          <div> <label><input type="radio" name="level" value="Intermediate">Intermediate</label></div>
+          <div> <label><input type="radio" name="level" value="Pre-advanced">Pre-Advanced</label></div>
+          <div> <label><input type="radio" name="level" value="Advanced">Advanced</label></div>
+        </fieldset>
+      </div>
+      <div class="col-12">
+        <fieldset>
+          <legend>Instrument</legend>
+          <div> <label><input type="radio" name="instrument" value="Piano">Piano</label></div>
+          <div> <label><input type="radio" name="instrument" value="Voice">Voice</label></div>
+          <div> <label><input type="radio" name="instrument" value="Guitar">Guitar</label></div>
+          <div> <label><input type="radio" name="instrument" value="Triangle">Triangle</label></div>
+          <div> <label><input type="radio" name="instrument" value="Banjo">Banjo</label></div>
+        </fieldset>
+      </div>
+      <div class="col-12">
+        <fieldset>
+          <legend>Location</legend>
+          <div> <label> <input type="radio" name="location" value="Snow">Snow</label></div>
+          <div> <label><input type="radio" name="location" value="MC">The MC</label></div>
+          <div> <label><input type="radio" name="location" value="STC">STC</label></div>
+          <div> <label><input type="radio" name="location" value="Smith">Smith</label></div>
+        </fieldset>
+      </div>
+      <div class="col-12">
+        <fieldset>
+          <legend>Room Number</legend>
+          <div> <label> <input type="radio" name="room" value="201">Room 201</label></div>
+          <div> <label><input type="radio" name="room" value="245">Room 245</label></div>
+          <div> <label><input type="radio" name="room" value="305">Room 305</label></div>
+          <div> <label><input type="radio" name="room" value="327">Room 327</label></div>
+        </fieldset>
+      </div>
+      <div class="col-12">
+        <fieldset>
+          <legend>Time</legend>
+          <div> <label><input type="radio" name="time" value="8:00">8:00</label></div>
+          <div> <label><input type="radio" name="time" value="8:30">8:30</label></div>
+          <div> <label><input type="radio" name="time" value="9:00">9:00</label></div>
+          <div> <label><input type="radio" name="time" value="9:30">9:30</div>
+        </fieldset>
+      </div>
+
+      <div id="duetInfo" style="display: none;">
+        <p id="duetTitle"><strong>Duet Person</strong></p>
+        <strong>First Name:</strong><br>
+        <input type="text" name="first_name2">*<br>
+        <strong>Last Name:</strong><br>
+        <input type="text" name="last_name2">*<br><br>
+        <strong>Student ID:</strong><br>
+        <input type="text" name="studentID2" oninput="numCheck2(this)">*<br>
+        <p id="numError2"></p><br>
+      </div>
+
+
+
+      <div class="row" style="margin-top:20px; float:right">
+        <input id="clear" type="reset" name="reset" value="Reset">
+        <input type="submit" value="Register" />
+      </div>
+    </form>
+
+  </div>
+  <div id="results"></div>
+
+  <footer class="copyright">
+    <small>© Copyright 2021. All Rights Reserved.</small>
+  </footer>
+
+
+
+</body>
+
+</html>

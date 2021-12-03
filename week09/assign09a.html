@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denzil Museruka's Assignments</title>
+    <style>
+        .input {
+            height: 40px;
+            width: 55%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="">
+        <select class="input" name="customers" onchange="loadCountry(this.value)">
+            <option value="">Select a country:</option>
+            <option value="usa.txt">USA</option>
+            <option value="canada.txt ">Canada</option>
+            <option value="russia.txt">Russia</option>
+            <option value="mexico.txt">Mexico</option>
+        </select>
+    </form>
+    <br>
+    <pre id="cities" style="text-align: center;">Country Cities...</pre>
+
+    <div>
+        <input type="text" id="file" class="input" placeholder="enter file name">
+        <button onclick="loadStudents()">Submit</button>
+
+        <div id="studentData" style="text-align: center;"></div>
+    </div>
+
+
+    <script>
+        // function loadCountry(filename) {
+        //     var xhttp;
+        //     if (filename == "") {
+        //         document.getElementById("cities").innerHTML = "";
+        //         return;
+        //     }
+        //     xhttp = new XMLHttpRequest();
+        //     xhttp.onreadystatechange = function () { // when response is given
+        //         if (this.readyState == 4 && this.status == 200) { // if response is ok ...
+        //             document.getElementById("cities").innerHTML = this
+        //             .responseText; // display the contents of the files
+        //         }
+        //     };
+        //     xhttp.open("GET", filename, true); // specifying the file to be read
+        //     xhttp.send(); // send the request
+        // }
+
+        function loadStudents() {
+            var xhttp;
+            var fileName = document.getElementById("file");
+            if (fileName == "") {
+                fileName = "json.txt"
+            }
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () { // when response is given
+                if (this.readyState == 4 && this.status == 200) { // if response is ok ...
+                    var test = JSON.parse(this.responseText); 
+                    document.getElementById("studentData").innerHTML = test; // display the contents of the files
+                }
+            };
+            xhttp.open("GET", fileName, true); // specifying the file to be read
+            xhttp.send(); // send the request
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daphne Avril's Assignments</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+
+
+<body>
+
+    <header id="header">
+        <h1>Welcome to Daphne Avril's JavaScript Calculator</h1>
+        <a href="../index.html">CS 213 Assignments.</a>
+    </header>
+    <hr>
+    <div class="calcForm" id="calculator">
+        <h2>JavaScript Calculator</h2>
+        <form name="calcForm" method="post" class="row">
+            <div class="col-3">
+                <input type="number" id="rate" name="rate" min="0" max="25.00" step="0.01" required
+                    placeholder="Annual Percentage Rate" />
+                <span id="rateValidation"></span>
+            </div>
+            <div class="col-3">
+                <input type="number" id="term" name="term" min="0" max="40" required placeholder="Loan Term" />
+                <span id="termValidation"></span>
+            </div>
+            <div class="col-3">
+                <input type="number" id="amount" name="amount" required placeholder="Loan Amount" />
+                <span id="amountValidation"></span>
+            </div>
+            <div class="col-3">
+                <input type="text" id="payment" name="payment" placeholder="Monthly Payment" />
+            </div>
+            <div class="col-3 ">
+                <input id="clear" type="reset" value="Clear">
+                <input type="button" id="calculate" name="calculate" onclick="compute()" value="Calculate" />
+
+            </div>
+
+
+        </form>
+    </div>
+    <footer>
+        <a href="#header" style="float: right;"><img src="../go-to-top.png" alt="go to top" width="50" height="50"></a>
+        <hr>
+        <small style="color: grey;">© Copyright 2021. All Rights Reserved.</small>
+    </footer>
+
+    <script>
+        function compute() {
+            if (validate()) {
+                getValues()
+                let rate = document.forms["calcForm"]["rate"].value;
+                let term = document.forms["calcForm"]["term"].value;
+                let amount = document.forms["calcForm"]["amount"].value;
+            }
+        }
+
+        function validate() {
+            let isValid = true;
+            let rate = document.forms["calcForm"]["rate"];
+            let term = document.forms["calcForm"]["term"];
+            let amount = document.forms["calcForm"]["amount"];
+            if (!rate.checkValidity()) {
+
+                document.getElementById("rateValidation").innerHTML = rate.validationMessage;
+                document.forms["calcForm"]["rate"].focus();
+                isValid = false;
+            }
+            if (!term.checkValidity()) {
+                document.getElementById("termValidation").innerHTML = rate.validationMessage;
+                document.forms["calcForm"]["term"].focus();
+                isValid = false;
+            }
+            if (!amount.checkValidity()) {
+                document.getElementById("amountValidation").innerHTML = rate.validationMessage;
+                document.forms["calcForm"]["amount"].focus();
+                isValid = false;
+            }
+            return isValid;
+        }
+
+        function getValues() {
+            let term = document.forms["calcForm"]["term"].value;
+            let rate = document.forms["calcForm"]["rate"].value;
+            let amt = document.forms["calcForm"]["amount"].value;
+            rate /= 1200;
+            term *= 12;
+            let monthlyPayment = calculatePayment(amt, rate, term);
+            document.forms["calcForm"]["payment"].value = "$" + monthlyPayment.toFixed(2);
+        };
+
+        function calculatePayment(amt, rate, term) {
+            let payment = amt * (rate * Math.pow((1 + rate), term)) / (Math.pow((1 + rate), term) - 1);
+            return payment;
+        }
+    </script>
+</body>
+
+</html>

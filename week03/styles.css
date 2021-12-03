@@ -1,0 +1,123 @@
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.contact {
+    
+    font: 95% Arial, Helvetica, sans-serif;
+    max-width: 800px;
+    margin: 10px auto;
+    margin-bottom: 80px;
+    padding: 16px;
+    background: #F7F7F7;
+    min-height: 440px;
+}
+
+.contact h2 {
+    background: #58afef;
+    border-radius: 4px;
+    padding: 10px 0;
+    font-size: 140%;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 12px;
+    color: #555;
+    border-radius: 4px;
+    font: 95% Arial, Helvetica, sans-serif;
+}
+
+
+.contact input[type="submit"],
+.contact input[type="button"] {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 20%;
+    padding: 12px;
+    background: #58afef;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    float: right;
+
+}
+
+.contact input[type="reset"] {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 20%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    float: right;
+
+}
+
+.contact input[type="submit"]:hover,
+.contact input[type="button"]:hover {
+    background: rgb(11, 7, 219);
+
+}
+.select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    color: #555;
+  }
+  .select select {
+    display: inline-block;
+    width: 100%;
+    margin:  0 0 20px;
+
+    padding: .5rem 2.25rem .5rem 1rem;
+    line-height: 1.5;
+    color: #555;
+    background-color: #eee;
+    border: 0;
+    border: 1px solid #D0D0D0;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: 0;
+  
+  }
+/* Input part is easier */
+input[type="text"],
+select {
+  font-family: sans-serif;
+  font-size: 15px;
+}
+.input-wrap {
+  margin: 0 0 20px 0;
+}
+input[type="text"] {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #D0D0D0;
+  width: 100%;
+  box-sizing: border-box; /* if you already aren't doing universally */
+}
+
